@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
 <body>
-    <div id="root">
+    <div class="container">
         <h1>Shortly: URL Reducer</h1>
-        <form action="" method="POST">
-            <label for="oriURL">URL:</label>
-            <input type="url" name="oriURL" id="oriURL" placeholder="paste URL here">
-            </input>
-            <button type="submit">Generate Shortly</button>
+        <form action="/shortly" method="POST" class="my-4 form-inline">
+            <label for="oriURL" class="sr-only">URL:</label>
+            <input type="url" name="oriURL" id="oriURL" required placeholder="paste URL here" class="form-control col mr-2"></input>
+            <button type="submit" class="btn btn-success">Generate Shortly</button>
         </form>
         <div id="result">Here is your Shortly: </div>
 
-        <table>
+        <table class="table table-striped table-responsive">
             <thead>
                 <tr>
                     <th>Original URL</th>
