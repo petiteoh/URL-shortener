@@ -12,8 +12,8 @@ app.get("/", (req, res) => {
     res.render("index")
 });
 
-app.post("/shortly", (req, res) => {
+// app.post("/shortly", (req, res) => {
 
-})
+// })
 
 app.listen(process.env.PORT || 5000);
