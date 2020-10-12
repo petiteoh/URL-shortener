@@ -29,17 +29,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <a href="google.com">google.com</a>
-                    </td>
-                    <td>
-                        <a href="/123">123</a>
-                    </td>
-                    <td>
-                        10
-                    </td>
-                </tr>
+                <% shortlys.forEach(shortly => { %>
+                    <tr>
+                        <td>
+                            <a href="<%= shortly.original %>"><%= shortly.original %></a>
+                        </td>
+                        <td>
+                            <a href="<%= shortly.short %>"><%= shortly.short %></a>
+                        </td>
+                        <td>
+                            <%= shortly.clicks %>
+                        </td>
+                    </tr>
+                <% }) %>
             </tbody>
         </table>
     </div>
