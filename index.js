@@ -27,7 +27,8 @@ app.get("/", async (req, res) => {
 
 app.post("/shortly", async (req, res) => {
     // debugger
-    await Shortly.create({ original: req.body.oriURL })
+    await Shortly.create({ original: req.body.oriURL });
+    res.redirect("/");
 });
 
 app.get("/:shortly", async (req, res) => {
