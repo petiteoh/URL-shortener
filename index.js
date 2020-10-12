@@ -20,18 +20,18 @@ mongoose.connect(db, { useNewUrlParser: true })
 app.set("view engine", "ejs");
 
 app.get("/", async (req, res) => {
-    debugger
+    // debugger
     const shortlys = await Shortly.find();
     res.render("index", { shortlys: shortlys })
 });
 
 app.post("/shortly", async (req, res) => {
-    debugger
+    // debugger
     await Shortly.create({ original: req.body.oriURL })
 });
 
 app.get("/:shortly", async (req, res) => {
-    debugger
+    // debugger
     const shortUrl = await Shortly.findOne({ short: req.params.shortly })
     if (shortUrl === null) return res.sendStatus(404);
     shortUrl.clicks++
